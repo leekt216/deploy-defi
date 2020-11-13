@@ -38,7 +38,7 @@ interface NexusMutual {
   pooledStaking: Contract;
 }
 
-async function deploy(deployer: Signer, dai: Contract, mkr: Contract, uniswapFactory: Contract) : Promise<NexusMutual> {
+export async function deploy(deployer: Signer, dai: Contract, mkr: Contract, uniswapFactory: Contract) : Promise<NexusMutual> {
   //to determine the owner
   const owner = await deployer.getAddress();
   // external
@@ -204,5 +204,3 @@ async function deploy(deployer: Signer, dai: Contract, mkr: Contract, uniswapFac
     pooledStaking: proxies.ps
   };
 }
-
-module.exports = deploy;
