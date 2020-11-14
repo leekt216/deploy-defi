@@ -1,0 +1,35 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IMasterAware",
+  "sourceName": "contracts/NexusMutual/interfaces/IMasterAware.sol",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "changeDependentContractAddress",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_masterAddress",
+          "type": "address"
+        }
+      ],
+      "name": "changeMasterAddress",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

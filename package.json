@@ -4,6 +4,7 @@
   "description": "testing smart contract is hard, deploying other contracts is harder",
   "main": "index.js",
   "scripts": {
+    "compile": "npx hardhat compile",
     "test": "npx hardhat test"
   },
   "repository": {

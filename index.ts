@@ -1,5 +1,5 @@
-import { deploy } from "./src/NexusMutual";
+import { NexusMutual } from "./src/NexusMutual";
 
 module.exports = {
-  deploy
+  NexusMutual
 }

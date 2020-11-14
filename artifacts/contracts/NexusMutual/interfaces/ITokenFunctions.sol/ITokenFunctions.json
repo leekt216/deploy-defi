@@ -1,0 +1,78 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ITokenFunctions",
+  "sourceName": "contracts/NexusMutual/interfaces/ITokenFunctions.sol",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_stakerAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_stakedContractAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_stakedContractIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "_deprecated_getStakerUnlockableTokensOnSmartContract",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "stakerAdd",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "stakedAdd",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "stakerIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "_deprecated_unlockableBeforeBurningAndCanBurn",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "canBurn",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
