@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/leekt216/deploy-defi#readme",
   "devDependencies": {
+    "@uniswap/v2-core": "^1.0.1",
     "hardhat": "^2.0.3",
     "nexusmutual": "github:nexusmutual/smart-contracts",
     "ts-node": "^9.0.0",

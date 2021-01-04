@@ -1,0 +1,247 @@
+{
+  "id": "59c84a50ca6e676bfb4729127ebb7870",
+  "_format": "hh-sol-build-info-1",
+  "solcVersion": "0.5.17",
+  "solcLongVersion": "0.5.17+commit.d19bba13",
+  "input": {
+    "language": "Solidity",
+    "sources": {
+      "contracts/NexusMutual/external/Deployer.sol": {
+        "content": "pragma solidity ^0.5.0;\n\ncontract Deployer {\n\n  function deploy(bytes memory data, uint256 salt) public {\n    assembly {\n      pop(create2(0, add(data, 32), mload(data), salt))\n    }\n  }\n\n}\n"
+      }
+    },
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers"
+          ],
+          "": [
+            "ast"
+          ]
+        }
+      }
+    }
+  },
+  "output": {
+    "contracts": {
+      "contracts/NexusMutual/external/Deployer.sol": {
+        "Deployer": {
+          "abi": [
+            {
+              "constant": false,
+              "inputs": [
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "salt",
+                  "type": "uint256"
+                }
+              ],
+              "name": "deploy",
+              "outputs": [],
+              "payable": false,
+              "stateMutability": "nonpayable",
+              "type": "function"
+            }
+          ],
+          "evm": {
+            "bytecode": {
+              "linkReferences": {},
+              "object": "608060405234801561001057600080fd5b50610115806100206000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80639c4ae2d014602d575b600080fd5b60cf60048036036040811015604157600080fd5b810190602081018135640100000000811115605b57600080fd5b820183602082011115606c57600080fd5b80359060200191846001830284011164010000000083111715608d57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550509135925060d1915050565b005b808251602084016000f550505056fea265627a7a72315820f8e2e5d33fd4f69adab3b3e43d5b0575211e37ce3075b6e1fba4d2a46cb37eca64736f6c63430005110032",
+              "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x115 DUP1 PUSH2 0x20 PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x28 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x9C4AE2D0 EQ PUSH1 0x2D JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xCF PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x40 DUP2 LT ISZERO PUSH1 0x41 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 ADD SWAP1 PUSH1 0x20 DUP2 ADD DUP2 CALLDATALOAD PUSH5 0x100000000 DUP2 GT ISZERO PUSH1 0x5B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP3 ADD DUP4 PUSH1 0x20 DUP3 ADD GT ISZERO PUSH1 0x6C JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP1 CALLDATALOAD SWAP1 PUSH1 0x20 ADD SWAP2 DUP5 PUSH1 0x1 DUP4 MUL DUP5 ADD GT PUSH5 0x100000000 DUP4 GT OR ISZERO PUSH1 0x8D JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP2 SWAP1 DUP1 DUP1 PUSH1 0x1F ADD PUSH1 0x20 DUP1 SWAP2 DIV MUL PUSH1 0x20 ADD PUSH1 0x40 MLOAD SWAP1 DUP2 ADD PUSH1 0x40 MSTORE DUP1 SWAP4 SWAP3 SWAP2 SWAP1 DUP2 DUP2 MSTORE PUSH1 0x20 ADD DUP4 DUP4 DUP1 DUP3 DUP5 CALLDATACOPY PUSH1 0x0 SWAP3 ADD SWAP2 SWAP1 SWAP2 MSTORE POP SWAP3 SWAP6 POP POP SWAP2 CALLDATALOAD SWAP3 POP PUSH1 0xD1 SWAP2 POP POP JUMP JUMPDEST STOP JUMPDEST DUP1 DUP3 MLOAD PUSH1 0x20 DUP5 ADD PUSH1 0x0 CREATE2 POP POP POP JUMP INVALID LOG2 PUSH6 0x627A7A723158 KECCAK256 0xF8 0xE2 0xE5 0xD3 EXTCODEHASH 0xD4 0xF6 SWAP11 0xDA 0xB3 0xB3 0xE4 RETURNDATASIZE JUMPDEST SDIV PUSH22 0x211E37CE3075B6E1FBA4D2A46CB37ECA64736F6C6343 STOP SDIV GT STOP ORIGIN ",
+              "sourceMap": "25:164:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:164:0;;;;;;;"
+            },
+            "deployedBytecode": {
+              "linkReferences": {},
+              "object": "6080604052348015600f57600080fd5b506004361060285760003560e01c80639c4ae2d014602d575b600080fd5b60cf60048036036040811015604157600080fd5b810190602081018135640100000000811115605b57600080fd5b820183602082011115606c57600080fd5b80359060200191846001830284011164010000000083111715608d57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550509135925060d1915050565b005b808251602084016000f550505056fea265627a7a72315820f8e2e5d33fd4f69adab3b3e43d5b0575211e37ce3075b6e1fba4d2a46cb37eca64736f6c63430005110032",
+              "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x28 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x9C4AE2D0 EQ PUSH1 0x2D JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0xCF PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x40 DUP2 LT ISZERO PUSH1 0x41 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 ADD SWAP1 PUSH1 0x20 DUP2 ADD DUP2 CALLDATALOAD PUSH5 0x100000000 DUP2 GT ISZERO PUSH1 0x5B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP3 ADD DUP4 PUSH1 0x20 DUP3 ADD GT ISZERO PUSH1 0x6C JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP1 CALLDATALOAD SWAP1 PUSH1 0x20 ADD SWAP2 DUP5 PUSH1 0x1 DUP4 MUL DUP5 ADD GT PUSH5 0x100000000 DUP4 GT OR ISZERO PUSH1 0x8D JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP2 SWAP1 DUP1 DUP1 PUSH1 0x1F ADD PUSH1 0x20 DUP1 SWAP2 DIV MUL PUSH1 0x20 ADD PUSH1 0x40 MLOAD SWAP1 DUP2 ADD PUSH1 0x40 MSTORE DUP1 SWAP4 SWAP3 SWAP2 SWAP1 DUP2 DUP2 MSTORE PUSH1 0x20 ADD DUP4 DUP4 DUP1 DUP3 DUP5 CALLDATACOPY PUSH1 0x0 SWAP3 ADD SWAP2 SWAP1 SWAP2 MSTORE POP SWAP3 SWAP6 POP POP SWAP2 CALLDATALOAD SWAP3 POP PUSH1 0xD1 SWAP2 POP POP JUMP JUMPDEST STOP JUMPDEST DUP1 DUP3 MLOAD PUSH1 0x20 DUP5 ADD PUSH1 0x0 CREATE2 POP POP POP JUMP INVALID LOG2 PUSH6 0x627A7A723158 KECCAK256 0xF8 0xE2 0xE5 0xD3 EXTCODEHASH 0xD4 0xF6 SWAP11 0xDA 0xB3 0xB3 0xE4 RETURNDATASIZE JUMPDEST SDIV PUSH22 0x211E37CE3075B6E1FBA4D2A46CB37ECA64736F6C6343 STOP SDIV GT STOP ORIGIN ",
+              "sourceMap": "25:164:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:164:0;;;;;;;;;;;;;;;;;;;48:138;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;48:138:0;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;48:138:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;48:138:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;48:138:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;48:138:0;;-1:-1:-1;;48:138:0;;;-1:-1:-1;48:138:0;;-1:-1:-1;;48:138:0:i;:::-;;;170:4;163;157:11;152:2;146:4;142:13;139:1;131:44;127:49;119:63;;:::o"
+            },
+            "methodIdentifiers": {
+              "deploy(bytes,uint256)": "9c4ae2d0"
+            }
+          }
+        }
+      }
+    },
+    "sources": {
+      "contracts/NexusMutual/external/Deployer.sol": {
+        "ast": {
+          "absolutePath": "contracts/NexusMutual/external/Deployer.sol",
+          "exportedSymbols": {
+            "Deployer": [
+              11
+            ]
+          },
+          "id": 12,
+          "nodeType": "SourceUnit",
+          "nodes": [
+            {
+              "id": 1,
+              "literals": [
+                "solidity",
+                "^",
+                "0.5",
+                ".0"
+              ],
+              "nodeType": "PragmaDirective",
+              "src": "0:23:0"
+            },
+            {
+              "baseContracts": [],
+              "contractDependencies": [],
+              "contractKind": "contract",
+              "documentation": null,
+              "fullyImplemented": true,
+              "id": 11,
+              "linearizedBaseContracts": [
+                11
+              ],
+              "name": "Deployer",
+              "nodeType": "ContractDefinition",
+              "nodes": [
+                {
+                  "body": {
+                    "id": 9,
+                    "nodeType": "Block",
+                    "src": "104:82:0",
+                    "statements": [
+                      {
+                        "externalReferences": [
+                          {
+                            "data": {
+                              "declaration": 3,
+                              "isOffset": false,
+                              "isSlot": false,
+                              "src": "146:4:0",
+                              "valueSize": 1
+                            }
+                          },
+                          {
+                            "salt": {
+                              "declaration": 5,
+                              "isOffset": false,
+                              "isSlot": false,
+                              "src": "170:4:0",
+                              "valueSize": 1
+                            }
+                          },
+                          {
+                            "data": {
+                              "declaration": 3,
+                              "isOffset": false,
+                              "isSlot": false,
+                              "src": "163:4:0",
+                              "valueSize": 1
+                            }
+                          }
+                        ],
+                        "id": 8,
+                        "nodeType": "InlineAssembly",
+                        "operations": "{\n    pop(create2(0, add(data, 32), mload(data), salt))\n}",
+                        "src": "110:72:0"
+                      }
+                    ]
+                  },
+                  "documentation": null,
+                  "id": 10,
+                  "implemented": true,
+                  "kind": "function",
+                  "modifiers": [],
+                  "name": "deploy",
+                  "nodeType": "FunctionDefinition",
+                  "parameters": {
+                    "id": 6,
+                    "nodeType": "ParameterList",
+                    "parameters": [
+                      {
+                        "constant": false,
+                        "id": 3,
+                        "name": "data",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 10,
+                        "src": "64:17:0",
+                        "stateVariable": false,
+                        "storageLocation": "memory",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes"
+                        },
+                        "typeName": {
+                          "id": 2,
+                          "name": "bytes",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "64:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_storage_ptr",
+                            "typeString": "bytes"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      },
+                      {
+                        "constant": false,
+                        "id": 5,
+                        "name": "salt",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 10,
+                        "src": "83:12:0",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 4,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "83:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "src": "63:33:0"
+                  },
+                  "returnParameters": {
+                    "id": 7,
+                    "nodeType": "ParameterList",
+                    "parameters": [],
+                    "src": "104:0:0"
+                  },
+                  "scope": 11,
+                  "src": "48:138:0",
+                  "stateMutability": "nonpayable",
+                  "superFunction": null,
+                  "visibility": "public"
+                }
+              ],
+              "scope": 12,
+              "src": "25:164:0"
+            }
+          ],
+          "src": "0:190:0"
+        },
+        "id": 0
+      }
+    }
+  }
+}

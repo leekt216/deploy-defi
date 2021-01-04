@@ -15,7 +15,31 @@ task("accounts", "Prints the list of accounts", async (args, hre) => {
 // Go to https://hardhat.org/config/ to learn more
 
 export default {
-  solidity: "0.5.17",
+  solidity: {
+    compilers :[
+      {
+        version: "0.6.6",
+      },
+      {
+        version:"0.5.16",
+        settings:{
+          optimizer: {
+            enabled: true,
+            runs: 999999
+          }
+        }
+      },
+      {
+        version: "0.5.17",
+        settings: {
+          optimizer : {
+            enabled: true,
+            runs: 200
+          }
+        }
+      }
+    ]
+  },
   networks: {
     coverage: {
       url: 'http://localhost:8555'
